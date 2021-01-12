@@ -1,4 +1,5 @@
 var express = require('express');
+var socket = require('socket.io')
 
 
 var app = express();
@@ -14,3 +15,6 @@ var server = app.listen(port, function(){
 
 app.use(express.static('public'));
 
+
+// socket set up
+var io = socket(server);
